@@ -1,5 +1,2 @@
 # Materiais em PDF (não versionar)
 *.pdf
-
-# Cursor (só na máquina local)
-.cursor/
