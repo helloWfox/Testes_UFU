@@ -1,0 +1,19 @@
+1. Principais vilões: Os maiores problemas foram erros básicos, como tentar colocar um número grande numa caixinha pequena (erro de conversão no Ariane 5) e a falta de sistemas de segurança que não dependessem só do software (no caso da máquina Therac-25). A falta de testes bem feitos também foi um grande vilão.
+
+2. Como evitar: Daria para evitar fazendo mais testes de estresse, revisando o código com outras pessoas e não confiando cegamente que o software nunca vai falhar. É sempre bom ter uma "trava" física de segurança.
+
+3. Avaliação da qualidade: A qualidade foi péssima nesses casos porque eles falharam na função principal que era ser seguro e confiável. Qualidade não é só o programa funcionar, é ele não quebrar quando algo sai do planejado.
+
+4. Relação entre os casos: Todos mostram que um erro pequeno no código pode causar um estrago gigante no mundo real, seja perdendo muito dinheiro ou tirando vidas.
+
+5. Impactos: Os impactos foram desde prejuízos de milhões de dólares até mortes de pacientes.
+
+6. Outros casos (Bug do Milênio, etc.): No Bug do Milênio, o vilão foi a economia de espaço nas datas. Na British Airways e AWS, foram falhas em sistemas centrais que pararam tudo. O caso da CrowdStrike mostrou como uma atualização mal testada pode derrubar computadores no mundo inteiro de uma vez só.
+
+7. Características de qualidade: Um software bom precisa ser fácil de usar, não dar erro toda hora e fazer o que promete. Um software ruim é aquele que trava, é confuso e que você só usa porque não tem outro.
+
+8. Pressman vs Hirama: O Pressman diz que qualidade é criar algo útil que valha a pena para quem faz e para quem usa. O Hirama foca mais em atender o que cada pessoa envolvida no projeto espera. No fundo, os dois querem que o software satisfaça o cliente sem dar dor de cabeça.
+
+9. CMMI e MPS-BR: São níveis que mostram o quanto uma empresa é organizada. O nível 1 é a bagunça total, onde cada um faz de um jeito. O nível 5 é quando a empresa já faz tudo de forma perfeita e vive melhorando. O MPS-BR é a versão brasileira, mais barata para empresas daqui seguirem.
+
+10. Autores famosos: Gente como Dijkstra e Parnas ajudaram a criar regras de como escrever códigos melhores e mais organizados desde o começo da computação.
