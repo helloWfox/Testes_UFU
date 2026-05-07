@@ -1,0 +1,27 @@
+1. O que é uma versão: É como se fosse uma "foto" do programa em um momento específico, com um nome ou número para a gente saber qual é qual.
+
+2. Estratégia de identificação: Eu usaria o Versionamento Semântico (tipo 1.0.0). É melhor porque segue uma regra lógica: o primeiro número muda se quebrar tudo, o segundo se ganhar função nova e o terceiro se for só um conserto de bug.
+
+3. Nome da primeira versão: 1.0.0.
+
+4. Nova funcionalidade: Se eu colocar uma função nova que não estraga o que já tinha, a versão vira 1.1.0.
+
+5. Sequência de atualizações (Exemplo do slide):
+- Começa na 1.1.0.
+- 3 correções: 1.1.1, 1.1.2, 1.1.3.
+- 2 funções novas: 1.2.0, 1.3.0.
+- 2 correções: 1.3.1, 1.3.2.
+- A versão mais recente seria a 1.3.2.
+
+6. Mudança crítica na API: Se mudar algo que faz os outros programas pararem de funcionar com o meu, eu tenho que mudar o primeiro número. Então de 1.3.2 iria para 2.0.0.
+
+7. .gitignore: Esse arquivo serve para falar pro Git ignorar pastas de lixo, tipo arquivos temporários ou arquivos que o computador gera sozinho e que não precisam ir pro servidor. Se eu colocar "build/" lá, o Git nunca vai tentar salvar essa pasta.
+
+8. Estados do Git: 
+- Commited: Quando você já salvou a mudança de vez no banco de dados.
+- Modified: Quando você mexeu no arquivo, mas ainda não avisou o Git que quer salvar.
+- Staged: Quando você marcou o arquivo e disse "esse aqui eu vou salvar no próximo commit".
+
+9. Git status: É o comando que a gente mais usa para ver em que pé as coisas estão, quais arquivos mudaram e se tem algo esquecido sem salvar.
+
+10. Tags: Servem para marcar momentos importantes, tipo o dia que o programa foi lançado oficialmente. A tag "Anotada" é mais completa, guarda quem criou e quando. A tag "Leve" é só um apelido rápido pro commit.
