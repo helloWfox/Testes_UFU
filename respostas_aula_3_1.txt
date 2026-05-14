@@ -1,0 +1,19 @@
+1. Repositório de teste e cenário de conflito: Eu criei uma pasta nova só para brincar com o Git (`git init`), separada do repositório da disciplina, para não misturar com o trabalho entregue. A ideia foi ter o ramo principal e o ramo `dev` a alterarem o mesmo ficheiro (`README.md`) em commits diferentes, que é quando o merge costuma gritar.
+
+2. README na linha principal: No `master` eu criei o `README.md` com uma primeira versão bem básica (nome do projeto, o que é, como usar) e fiz o commit inicial. Assim o ficheiro já existia na linha principal antes de abrir o ramo de desenvolvimento.
+
+3. Ramo `dev`: Criei o ramo `dev` (`git branch dev` e depois `git switch dev`) e editei o mesmo `README.md`, acrescentando mais orientações (por exemplo uma secção nova com passos ou dicas). Fiz o commit no `dev`. Até aqui ainda não tinha conflito porque o `master` não tinha sido mexido outra vez depois disso.
+
+4. Volta ao principal e segunda alteração: Voltei para o `master` (`git switch master`) e alterei de novo o `README.md`, desta vez com indicações de onde as orientações devem entrar (tipo “coloque as instruções nesta secção”). Fiz outro commit. A partir daí `master` e `dev` tinham cada um a sua versão do mesmo ficheiro — cenário clássico para conflito no merge.
+
+5. Tentativa de merge: Com o `master` ativo, rodei `git merge dev`. O Git avisou que não conseguiu juntar sozinho e marcou conflito no `README.md`, porque as duas linhas de trabalho tinham mudado linhas parecidas ou a mesma zona do texto.
+
+6. Observação em cada passo: Usei `git status` para ver “merging”, ficheiros em `both modified` e o que faltava resolver. Usei também `git log --oneline --decorate --graph --all` para visualizar a bifurcação e os dois ramos. Dentro do README apareceram os marcadores `<<<<<<<`, `=======` e `>>>>>>>` mostrando a versão de cada lado.
+
+7. Resolução com ferramenta: Resolvi apagando os marcadores `<<<<<<<` / `=======` / `>>>>>>>` e juntando o texto que fazia sentido, ou testando o `git mergetool` depois de configurar uma ferramenta (no slide aparece o Meld no Linux). No fim `git add README.md` e `git commit` para terminar o merge. Dá para apagar a pasta de teste e repetir o processo para treinar outro conflito.
+
+8. O que são branches: São ramificações — linhas de desenvolvimento paralelas à principal — para experimentar sem estragar a linha estável. No Git isso é leve e rápido.
+
+9. Por que dá conflito no merge: Porque o Git não consegue decidir sozinho como juntar duas alterações que mexem na mesma parte do mesmo ficheiro. Aí ele marca o conflito e pede que alguém escolha o resultado final.
+
+10. Fast-forward vs merge “de verdade”: Se a branch principal não ganhou commits novos enquanto a outra trabalhava, o merge pode ser só fast-forward (só move o ponteiro). Se os dois lados divergiram, costuma aparecer um commit de merge que junta as duas histórias; no `git log --graph` dá para ver a diferença.
